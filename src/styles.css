@@ -1,0 +1,29 @@
+:root{
+  --bg:#0b0c10; --surface:#151821; --text:#e9eef5; --muted:#a9b4c2;
+  --primary:#6aa9ff; --border:#23273a; --ring:#8ab4ff; color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f8fb; --surface:#fff; --text:#12141a; --muted:#5b6473; --primary:#2b6cff; --border:#e7e9f1; --ring:#5f8dff; color-scheme:light;
+  }
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text)}
+.container{max-width:820px;margin:0 auto;padding:24px}
+.card{background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+h1{margin:0 0 12px}
+.muted{color:var(--muted)}
+.row{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+.btn{border:1px solid var(--border); background:transparent; color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer}
+.btn.primary{background:var(--primary); color:#fff; border-color:transparent}
+.btn:focus-visible{outline:2px solid var(--ring); outline-offset:2px}
+select, textarea, input{font:inherit}
+select{padding:10px 12px; border-radius:10px; border:1px solid var(--border); background:transparent; color:var(--text)}
+.quote{
+  font-size:1.4rem; line-height:1.5; margin:8px 0 12px;
+}
+.author{font-size:1rem; color:var(--muted)}
+.badge{border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:.9rem}
+.grid{display:grid; gap:12px}
+.kbd{border:1px solid var(--border); border-radius:8px; padding:2px 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
